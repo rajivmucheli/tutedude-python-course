@@ -1,11 +1,16 @@
-# Program to read a file line by line with error handling
+# Step 1: Create a dictionary of student names and marks
+students = {
+    "Alice": 85,
+    "Bob": 92,
+    "Charlie": 78,
+    "David": 88
+}
 
-try:
-    with open("sample.txt", "r") as file:
-        print("Contents of sample.txt:\n")
-        for line in file:
-            print(line.strip())  # strip() removes the newline character
-except FileNotFoundError:
-    print("Error: The file 'sample.txt' does not exist.")
-except Exception as e:
-    print("An unexpected error occurred:", e)
+# Step 2: Ask the user to input a student's name
+name = input("Enter the student's name: ")
+
+# Step 3 & 4: Retrieve marks or show 'not found' message
+if name in students:
+    print(f"{name}'s marks: {students[name]}")
+else:
+    print(f"Student '{name}' not found in the record.")
