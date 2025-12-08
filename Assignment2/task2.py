@@ -1,10 +1,22 @@
-# Program to calculate the sum of numbers from 1 to 50
+def even(num1, num2):
+    """Function to check whether two numbers are even or odd."""
+    results = {}
+    for num in (num1, num2):
+        if num % 2 == 0:
+            results[num] = "even"
+        else:
+            results[num] = "odd"
+    return results
 
-total_sum = 0  # Variable to store the sum
+def odd(num1, num2):
+    """Function to check whether two numbers are odd or even."""
+    results = {}
+    for num in (num1, num2):
+        if num % 2 != 0:
+            results[num] = "odd"
+        else:
+            results[num] = "even"
+    return results
 
-# Using a for loop to iterate from 1 to 50
-for num in range(1, 51):
-    total_sum += num
-
-# Displaying the final sum
-print("The sum of numbers from 1 to 50 is:", total_sum)
+even(4, 7)
+odd(3, 8)
